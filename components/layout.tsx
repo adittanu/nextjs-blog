@@ -3,11 +3,18 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import React from "react";
 
 const name = "Adit Tanu";
 export const siteTitle = "Next.js Sample Website";
 
-export default function Layout({ children, home }) {
+export default function Layout({
+  children,
+  home,
+}: {
+  children: React.ReactNode;
+  home?: boolean;
+}) {
   return (
     <div className={styles.container}>
       <h1 className="mb-20 hidden rounded-lg border-8 border-slate-500 bg-yellow-200 p-10 text-slate-800 hover:translate-y-2">
